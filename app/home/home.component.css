@@ -1,0 +1,123 @@
+h1{text-align: center;
+	position:relative;
+	font-size: 1.5em;
+}
+h1 span:first-child{
+	font-family:  big;
+	font-size: 3em;
+	color:var(--bleuinter);
+text-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+}
+
+h1 span:last-child{
+	font-family:  var(--dancing);
+	font-size: 2em;
+	position: absolute;
+	left:0;
+	right:0;
+	top:5%;
+	bottom:0;
+	color:white;
+}
+
+main{
+
+	margin:5%;
+
+}
+#presentation{
+	background-color: #fcfcfc;
+	position:relative;
+	font-family: var(--hind);
+	color:var(--bleufonce);
+	line-height: 1.5;
+}
+
+h2{
+	font-family: var(--montserrat);
+	color:var(--bleufonce);
+	font-size: 1.5em;
+	font-weight: bolder;
+	margin-bottom: 5%;
+}
+
+#presentation div:last-child{
+	width:40%;
+	margin-left: 50%;
+	padding-top: 10%;
+}
+#skills{
+	background-color: #f5f7f8;
+	padding:15%;
+	padding-top:5%;
+
+}
+
+
+#photo{
+	background-color: white;
+	padding:3%;
+	max-width: 30%;
+	position:absolute;
+	margin-left: 10%;
+	bottom:50px;
+
+
+}
+
+svg{
+	margin: 0 3.5vw;
+}
+.infous {
+
+	display: flex;
+	width:100%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin:35px auto;
+
+
+
+}
+.infous.l1{
+	width:70%;
+
+
+}
+.infous.l2{
+
+
+}
+.infous.l3{
+	width:80%;
+
+}
+
+.infous.l4{
+
+}
+
+
+.icon {
+
+
+}
+
+.icon img {
+	max-width: none;
+}
+
+.icon:hover {
+	-webkit-transform: rotate(360deg);
+	transform: rotateZ(260deg);
+}
+
+h3{
+	color:var(--bleuclair);
+	width: 100%;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bolder;
+
+}
