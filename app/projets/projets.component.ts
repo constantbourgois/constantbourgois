@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+/*import { routerTransition } from '../router.animations';*/
 
 @Component({
   selector: 'projets',
   templateUrl: 'app/projets/projets.component.html',
-  styles:['projets.component.css'],
+  styleUrls:['app/projets/projets.component.css'],
+  /*animations: [routerTransition()],
+  host: {'[@routerTransition]': ''}*/
 
 })
 

@@ -1,0 +1,161 @@
+* {
+    color: var(--bleuinter);
+    text-align: center;
+    line-height: 1;
+    font-weight: lighter;
+    font-family: var(--hind);
+    line-height: 1.5;
+    letter-spacing: 3px;
+}
+
+img {
+    max-width: 100%;
+    opacity: 1;
+}
+
+.wrap-projet {
+    background-color: white;
+    width: 100%;
+    padding-bottom: 5%;
+
+}
+
+article {
+    margin: 5% 2%;
+    margin-bottom: 0;
+    background-color: #f5f7f8;
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    vertical-align: top;
+    position: relative;
+    padding: 20% 0;
+}
+
+.wrap-article {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+a {
+    padding: 1% 0%;
+    color: var(--bleufonce);
+    font-size: .8em;
+    text-transform: uppercase;
+    font-family: montserrat;
+    letter-spacing: normal;
+    box-shadow: 1px 1px 0.5px 0.5px var(--bleufonce);
+    display: inline-block;
+    padding: 2% 5%;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+ul {}
+
+li {
+    display: inline-block;
+    font-size: .8em;
+}
+
+.img-projet {
+    /*background-position: center;
+    background-size: contain;
+    margin: 2% 0;
+    padding:10%!important;
+    margin: 0 auto;*/
+}
+
+svg {
+    max-width: 40%;
+}
+
+path {
+    fill: var(--bleufonce)!important;
+}
+
+#painting {
+    fill: none!important;
+}
+
+#rims {
+    fill: none!important;
+}
+
+.cls-5 {
+    fill: white!important;
+}
+
+.duel {
+    /*background-image: url('./assets/img/duelimg1.png');*/
+}
+
+.monster {}
+
+.pulsss {
+    /*background-image: url("./assets/img/pulsss.png");
+    background-size: cover;
+    background-repeat: no-repeat;*/
+}
+
+.luxsense {
+    /*background-image: url("./assets/img/luxsense.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color:rgba(0,0,0,.1);*/
+}
+
+.taches {
+    font-size: 1em;
+    text-align: center;
+    ;
+    width: 100%;
+}
+
+.lang {
+    font-size: .8em;
+}
+
+.nom-projet, .type-projet {
+    text-align: center;
+    ;
+}
+
+.nom-projet {
+    font-size: 1em;
+}
+
+.type-projet {
+    font-size: .8em;
+}
+
+@media (max-width: 970px) {
+    article {}
+}
+
+@media (max-width: 768px) {
+    article {
+        width: 80%;
+        padding: 40% 0;
+    }
+}
+
+@media (max-width: 375px) {
+    article {}
+}

@@ -1,3 +1,78 @@
-<main>
-  <div> CONTACT</div>
-</main>
+<article>
+    <span>+33 6 62 13 62 62 </span><span>constantbourgois@gmail.com</span>
+    <div class="social-contact">
+        <a href="https://fr.linkedin.com/in/constant-bourgois-02a77b11
+"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://github.com/constantbourgois"> <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.facebook.com/constant.bourgois.3"> <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+    </div>
+
+
+</article>
+
+
+<form [hidden]="submitted" id="contactform" novalidate [formGroup]="contactForm" (ngSubmit)="sendEmail($event)">
+    <h4 id="titlecontact"></h4>
+    <div>
+        <div><label>nom</label><input [ngClass]="{'erreur-form': !contactForm.controls['name'].valid && contactForm.controls['name'].touched} " formControlName="name" type="text" name="u_name" />
+            <div *ngIf="contactForm.controls['name'].hasError('required') && contactForm.controls['name'].touched" class="alert alert-danger">Veuillez indiquer votre nom</div>
+
+        </div>
+        <div><label>email</label><input [ngClass]="{'erreur-form': !contactForm.controls['email'].valid && contactForm.controls['email'].touched} " formControlName="email" type="email" name="u_email" />
+            <div *ngIf="contactForm.controls['email'].hasError('required') && contactForm.controls['email'].touched" class="alert alert-danger">Veuillez indiquer un email valide</div>
+        </div>
+    </div><!--
+    --><div><label>message</label><textarea [ngClass]="{'erreur-form': !contactForm.controls['message'].valid && contactForm.controls['message'].touched} " formControlName="message" name="message" rows="12"></textarea>
+      <div *ngIf="contactForm.controls['message'].hasError('required') && contactForm.controls['message'].touched" class="alert alert-danger">Veuillez indiquer votre message</div>
+    </div><!--
+    --><div>
+        <button [disabled]="!contactForm.valid" [ngClass]="{'submit-valid' : contactForm.valid }" type="submit" class="valider">VALIDER</button>
+    </div>
+
+</form>
+<div class="message-envoye"[hidden]="!submitted">
+    <div>
+  Merci!
+    </div>
+</div>
+
+<!--
+<?php
+	// write in databse//
+
+   	$host = 'db631353762.db.1and1.com';
+	$dbname = 'db631353762';
+
+
+	try {
+	$dbh = new PDO("mysql:host=$host;dbname=$dbname", 'dbo631353762', 'miaumonster');
+
+
+
+	} catch (PDOException $e) {
+	print "Erreur !: " . $e->getMessage() . "<br/>";
+	die();
+	}
+
+
+	$req = $dbh->prepare('INSERT INTO ID(Name,Email,Text) VALUES(:u_name, :u_email, :message)');
+	$req->execute(array(
+	'u_name' => $_POST['u_name'],
+	'u_email' => $_POST['u_email'],
+	'message' => $_POST['message'],
+	));
+
+	//send email//
+     $to      = 'contact@monstertruckagency.com';
+     $subject = 'contact site web';
+     $message = 'from: '.' '.$_POST['u_name'] . ' ' . $_POST['u_email'] . ' ' . $_POST['message'];
+
+
+     mail($to, $subject, $message, $headers);
+
+
+	echo '<div id="outputmessage">Miauuu!</div>';
+?>
+-->
