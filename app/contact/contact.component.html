@@ -21,7 +21,7 @@
 
         </div>
         <div><label>email</label><input [ngClass]="{'erreur-form': !contactForm.controls['email'].valid && contactForm.controls['email'].touched} " formControlName="email" type="email" name="u_email" />
-            <div *ngIf="contactForm.controls['email'].hasError('required') && contactForm.controls['email'].touched" class="alert alert-danger">Veuillez indiquer un email valide</div>
+            <div *ngIf="!contactForm.controls['email'].valid && contactForm.controls['email'].touched" class="alert alert-danger">Veuillez indiquer un email valide</div>
         </div>
     </div><!--
     --><div><label>message</label><textarea [ngClass]="{'erreur-form': !contactForm.controls['message'].valid && contactForm.controls['message'].touched} " formControlName="message" name="message" rows="12"></textarea>

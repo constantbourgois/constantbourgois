@@ -13,7 +13,7 @@ var BaseComponent = (function () {
     function BaseComponent() {
     }
     BaseComponent.prototype.showMobilemenu = function () {
-        document.getElementById('hideTarget').classList.toggle('show');
+        document.getElementById('hideTarget').classList.toggle("show");
     };
     BaseComponent = __decorate([
         core_1.Component({

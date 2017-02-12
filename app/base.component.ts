@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {trigger, state, animate, style, transition} from '@angular/core';
 
 @Component({
     selector: 'mon-site',
@@ -8,10 +7,8 @@ import {trigger, state, animate, style, transition} from '@angular/core';
 })
 
 export class BaseComponent {
-
     showMobilemenu() {
-        document.getElementById('hideTarget').classList.toggle('show');
-
+        document.getElementById('hideTarget').classList.toggle("show");
 
 
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from './contact.service';
 /*import { routerTransition } from '../router.animations';*/
 import { GlobalValidator } from './globalvalidator';
@@ -27,7 +27,7 @@ export class ContactComponent {
         email: ["", Validators.compose([Validators.required, GlobalValidator.mailFormat])],
         message: ["", Validators.required],
     });
-    console.log(this.contactForm.controls['name']);
+    console.log(this.contactForm.controls['email']);
   };
 
 

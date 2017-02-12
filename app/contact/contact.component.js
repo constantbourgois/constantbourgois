@@ -24,7 +24,7 @@ var ContactComponent = (function () {
             email: ["", forms_1.Validators.compose([forms_1.Validators.required, globalvalidator_1.GlobalValidator.mailFormat])],
             message: ["", forms_1.Validators.required],
         });
-        console.log(this.contactForm.controls['name']);
+        console.log(this.contactForm.controls['email']);
     }
     ;
     ContactComponent.prototype.sendEmail = function () {
