@@ -8,10 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var forms_1 = require("@angular/forms");
-var contact_service_1 = require("./contact.service");
-var globalvalidator_1 = require("./globalvalidator");
+var core_1 = require('@angular/core');
+var forms_1 = require('@angular/forms');
+var contact_service_1 = require('./contact.service');
+/*import { routerTransition } from '../router.animations';*/
+var globalvalidator_1 = require('./globalvalidator');
 var ContactComponent = (function () {
     function ContactComponent(fb, contactService) {
         this.fb = fb;
@@ -33,16 +34,18 @@ var ContactComponent = (function () {
         var output = this.contactForm.value;
         this.contactService.postContact(output).subscribe(function (response) { return _this.response = response; }, function (error) { return console.log(error); });
     };
+    ContactComponent = __decorate([
+        core_1.Component({
+            selector: 'contact',
+            templateUrl: 'app/contact/contact.component.html',
+            styleUrls: ['app/contact/contact.component.css'],
+            /*animations: [routerTransition()],
+            host: { '[@routerTransition]': '' },*/
+            providers: [contact_service_1.ContactService]
+        }), 
+        __metadata('design:paramtypes', [forms_1.FormBuilder, contact_service_1.ContactService])
+    ], ContactComponent);
     return ContactComponent;
 }());
-ContactComponent = __decorate([
-    core_1.Component({
-        selector: 'contact',
-        templateUrl: 'app/contact/contact.component.html',
-        styleUrls: ['app/contact/contact.component.css'],
-        providers: [contact_service_1.ContactService]
-    }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder, contact_service_1.ContactService])
-], ContactComponent);
 exports.ContactComponent = ContactComponent;
 //# sourceMappingURL=contact.component.js.map
